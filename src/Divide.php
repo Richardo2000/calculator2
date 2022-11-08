@@ -13,8 +13,8 @@ class Divide // (определение класса) описывает дел�
         $this->num1 = $num1;
         $this->num2 = $num2;
     }
-    // метод, который складывает два числа
-    function a_divide_b() {
+
+    function solve() {
         return $this->num1 / $this->num2;
     }
 }

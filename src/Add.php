@@ -13,8 +13,8 @@ class Add // (определение класса) описывает сложе
         $this->num1 = $num1;
         $this->num2 = $num2;
     }
-    // метод, который складывает два числа
-    function a_add_b() {
+
+    function solve() {
         return $this->num1 + $this->num2;
     }
 }
