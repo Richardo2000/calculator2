@@ -16,35 +16,28 @@ $action = $_POST['action'] ;
 
 switch ($action) {
     case "add":
-        echo 'operation: add';
-        echo PHP_EOL . '<br>';
-         echo 'result:';
-         $result = new add ($a, $b );
-         echo $result->a_add_b();
+        $operation_name = "Add";
+        $operation = new Add ($a, $b );
         break;
     case "subtract":
-        echo 'operation: subtract';
-        echo PHP_EOL . '<br>';
-        echo 'result:';
-        $result = new subtract ($a, $b );
-        echo $result->a_subtract_b();
+        $operation_name = "Subtract";
+        $operation = new Subtract ($a, $b );
         break;
     case "divide":
-        echo 'operation: divide';
-        echo PHP_EOL . '<br>';
-        echo 'result:';
-        $result = new divide ($a, $b );
-        echo $result->a_divide_b();
+        $operation_name = "Divide";
+        $operation = new Divide ($a, $b );
         break;
     case "multiply":
-        echo 'operation: multiply';
-        echo PHP_EOL . '<br>';
-        echo 'result:';
-        $result = new multiply ($a, $b );
-        echo $result->a_multiply_b();
+        $operation_name = "Multiply";
+        $operation = new Multiply ($a, $b );
         break;
     default:
         echo 'error';
 }
 
+if (!empty($operation) && !empty($operation_name)) {
+    header("Content-type: text/plain");
+    echo 'operation: ' . $operation_name . PHP_EOL;
+    echo 'result: ' . $operation->solve();
+}
 
