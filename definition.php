@@ -19,28 +19,28 @@ switch ($action) {
         echo 'operation: add';
         echo PHP_EOL . '<br>';
          echo 'result:';
-         $result = new add ($a, $b );
+         $result = new Add ($a, $b );
          echo $result->a_add_b();
         break;
     case "subtract":
         echo 'operation: subtract';
         echo PHP_EOL . '<br>';
         echo 'result:';
-        $result = new subtract ($a, $b );
+        $result = new Subtract ($a, $b );
         echo $result->a_subtract_b();
         break;
     case "divide":
         echo 'operation: divide';
         echo PHP_EOL . '<br>';
         echo 'result:';
-        $result = new divide ($a, $b );
+        $result = new Divide ($a, $b );
         echo $result->a_divide_b();
         break;
     case "multiply":
         echo 'operation: multiply';
         echo PHP_EOL . '<br>';
         echo 'result:';
-        $result = new multiply ($a, $b );
+        $result = new Multiply ($a, $b );
         echo $result->a_multiply_b();
         break;
     default:
